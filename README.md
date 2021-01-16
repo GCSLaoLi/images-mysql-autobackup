@@ -1,4 +1,15 @@
 ## 使用
+
+dockerhub拉取
+```
+docker pull gcslaoli/mysql8-autobackup:latest
+```
+
+阿里云拉取
+```
+docker pull registry.cn-beijing.aliyuncs.com/gcslaoli/mysql8-autobackup:latest
+```
+
 每分钟执行一次测试 可以通过容器日志查看
 
 每小时执行一次 binlog 增量备份到`/backup/increment`
