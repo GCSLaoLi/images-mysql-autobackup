@@ -1,0 +1,16 @@
+services:
+  mysql8-autobackup:
+    build: ./mysql8-autobackup
+    image: gcslaoli/mysql8-autobackup
+    command: --default-authentication-plugin=mysql_native_password
+    # restart: always
+    volumes:
+      - ./data/mysql/:/var/lib/mysql/
+      - ./data/backup/:/backup/
+
+      # - ./my.cnf:/etc/mysql/my.cnf
+    environment:
+      # TZ: Asia/Shanghai # 指定时区
+      MYSQL_ROOT_PASSWORD: "12345678" # 配置root用户密码
+    # ports:
+    #   - 3306:3306
