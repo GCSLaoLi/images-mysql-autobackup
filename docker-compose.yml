@@ -7,7 +7,6 @@ services:
     volumes:
       - ./data/mysql/:/var/lib/mysql/
       - ./data/backup/:/backup/
-
       # - ./my.cnf:/etc/mysql/my.cnf
     environment:
       # TZ: Asia/Shanghai # 指定时区
